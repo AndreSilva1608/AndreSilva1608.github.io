@@ -3,6 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .Imagem {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            gap: 10px; 
+        }
+
+        .Imagem img {
+            width: 150px;
+            height: 80px;
+            object-fit: cover; 
+            border-radius: 20px; 
+        }
+
+        .poema {
+            width: 60%;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid #444;
+            border-radius: 15px;
+            background-color: #f9f9f9;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .poema p {
+            margin: 5px 0;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .poema p:nth-child(odd) {
+            color: darkblue; 
+            font-weight: bold;
+        }
+
+        .poema p:nth-child(even) {
+            color: darkred;
+            font-style: italic;
+        }
+
+        .poema p:nth-child(1) {
+            font-size: 20px;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,13 +65,45 @@
         <h2>Multimédia</h2>
         <p>Aqui encontras imagens e vídeos relacionados com Castelo Branco.</p>
 
-        <h3>Imagem</h3>
-        <img src="images/casteloBranco.jpeg" alt="Castelo de Castelo Branco" width="400">
+        <!-- Links âncora -->
+        <p>
+            <a href="#fotografias">Ir para Fotografias</a> | 
+            <a href="#video">Ir para Vídeo</a> | 
+            <a href="#poesia">Ir para Poesia</a>
+        </p>
 
-    
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="Imagem">
+            <img src="images/casteloBranco.jpeg" alt="Castelo de Castelo Branco">
+            <img src="images/Bandeira.jpg" alt="Bandeira">
+            <img src="images/CasteloCasteLoBranco.jpg" alt="Castelo de Castelo Branco">
+            <img src="images/Catedral.jpg" alt="Catedral">
+            <img src="images/Jardim-Paco-Episcopal-Castelo-Branco.jpg" alt="Jardim do Paço Episcopal">
+            <img src="images/torre_o_relogio.jpg" alt="Torre do Relógio">
+        </div>
+
+        <h3 id="video">Vídeo</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UtkPrs5JSOQ?si=iH_dqpNRBGHmT-tV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3 id="poesia">Poesia</h3>
+        <div class="poema">
+            <p>Entre colinas ergues-te altaneiro,</p>
+            <p>cidade de história, de traço certeiro.</p>
+            <p>Nos jardins do Paço, flores a dançar,</p>
+            <p>segredos antigos o vento a soprar.</p>
+            <p>Bordados finos, mãos de tradição,</p>
+            <p>cada ponto guarda alma e paixão.</p>
+            <p>Na torre o relógio o tempo a marcar,</p>
+            <p>conta memórias que nunca vão parar.</p>
+            <p>Terra do sol, da Beira o coração,</p>
+            <p>acolhe quem chega com calor e emoção.</p>
+            <p>Castelo Branco, berço de encanto,</p>
+            <p>és poesia viva, és Portugal em canto.</p>
+        </div>
     </main>
     <footer>
         <p>DIW 2025</p>
     </footer>
 </body>
 </html>
+
