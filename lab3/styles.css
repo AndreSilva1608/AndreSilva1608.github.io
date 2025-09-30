@@ -1,0 +1,57 @@
+/* Estilo global da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* cor de fundo da página */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+   background-color: #006400;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navegação */
+nav {
+   background-color: #333; 
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    background-color: white; /* contraste */
+    margin: 20px;  /* espaçamento em relação ao header e footer */
+    padding: 20px; /* espaço interno */
+    border-radius: 10px;
+}
+
+/* Imagens dentro do main */
+main img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: black; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

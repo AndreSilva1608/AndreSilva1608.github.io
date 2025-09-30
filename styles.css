@@ -1,6 +1,134 @@
-body {
-    background-color: #b3b3b3;
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
 }
-img {
-    width: 300px;
+
+header, footer, section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+header {
+  background: white;
+  position: sticky;
+  height: 10vh;
+  top: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 2.5vh; /* menor que 5vh, parecido com h2 */
+  font-weight: bold;
+}
+
+/* Hero Page */
+section:nth-child(1) {
+  height: 90vh;
+  background: steelblue;
+  color: white;
+}
+
+h1 {
+  font-size: 6vh;
+}
+
+h2 {
+  font-size: 4vh;
+}
+
+/* -------- PROJETOS -------- */
+.projetos {
+  height: 100vh;
+  background: aquamarine; /* verde água */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projetos h2 {
+  margin-bottom: 40px;
+  font-size: 4.5vh;
+  color: #004d40;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  height: 150px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 2.5vh;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* cores diferentes para cada card */
+.card1 {
+  background: linear-gradient(135deg, #ff6f61, #d32f2f);
+}
+.card2 {
+  background: linear-gradient(135deg, #42a5f5, #1565c0);
+}
+.card3 {
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+}
+
+/* efeito hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* -------- DISCIPLINA -------- */
+section:nth-child(3) {
+  height: 80vh;
+  background: lightblue;
+}
+
+.disciplina {
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.disciplina .texto {
+  max-width: 400px;
+}
+
+.disciplina .imagem img {
+  width: 75%; /* reduzido para 75% */
+  height: auto;
+}
+
+/* -------- FOOTER -------- */
+footer {
+  height: 10vh;
+  background: black;
+  color: white;
+  font-size: 2vh;
+}
+

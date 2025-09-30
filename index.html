@@ -3,42 +3,62 @@
 <head>
   <meta charset="utf-8">
   <title>Primeira Página</title>
-   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
-  <h1>Primeira Página Web!</h1>
-  
+  <nav>
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#disciplina">Interfaces Web</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-  <p>Eis a minha primeira página Web!</p>
-  <p>
-    Na Unidade Curricular de 
-    <a target="_blank" href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
-      Desenvolvimento de Interfaces Web
+  <!-- HERO IMAGE -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>"Code is like humor. When you don't get it, it's not funny."</h1>
+      <a href="#projetos" class="cta">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+ <section id="projetos" class="projetos">
+  <h2>Os meus labs</h2>
+  <div class="cards">
+    <a href="lab1/index.html" class="card">
+      <h3>Laboratório 1</h3>
     </a>
-    abordaremos as seguintes tecnologias Web &#127760;:
-  </p>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>React e Next.js</li>
-  </ul>
-  <p>Iremos criar soluções criativas!</p>
-  <nav>
-    <ul>
-      <li><a href="lab1/index.html">Laboratorio1</a></li>
-      <li><a href="lab2/index.html">Laboratorio2</a></li>
-    </ul>
-  </nav>
-  <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+    <a href="lab2/index.html" class="card">
+      <h3>Laboratório 2</h3>
+    </a>
+    <a href="lab3/index.html" class="card">
+      <h3>Laboratório 3</h3>
+    </a>
+  </div>
+</section>
+
+  <!-- DISCIPLINA -->
+  <section id="disciplina" class="disciplina">
+    <div class="texto">
+      <h2>DIW 🎉</h2>
+        <a target="_blank" href="https://moodle.ensinolusofona.pt/course/view.php?id=11232">
+          Desenvolvimento de Interfaces Web
+        </a>
+      <p>Iremos criar soluções criativas!</p>
+    </div>
+    <div class="imagem">
+      <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+    </div>
+  </section>
 </main>
 
 <footer>
-  <p>Universidade Lusófona © 2025</p>
+  <p>Universidade Lusófona | DIW 2025</p>
 </footer>
 
 </body>
