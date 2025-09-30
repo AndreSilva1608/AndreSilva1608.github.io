@@ -1,57 +1,141 @@
-/* Estilo global da página */
+/* ================= ESTILO GLOBAL ================= */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* cor de fundo da página */
-    margin: 0;
-    padding: 0;
+  background-color: #f0f0f0;
 }
 
-/* Cabeçalho */
+/* ================= HEADER ================= */
 header {
-   background-color: #006400;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  
+  padding: 20px;
+  background-color: #000000; /* verde escuro */
+  color: white;
 }
 
-/* Navegação */
+/* ================= TÍTULO ================= */
+h1 {
+  font-size: 1.8rem;
+}
+
+/* ================= NAVEGAÇÃO ================= */
 nav {
-   background-color: #333; 
-    padding: 10px;
+  display: flex;
+  gap: 10px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px lightgrey;
+  font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:last-child {
+  background: dodgerblue;
+  color: white;
 }
 
-/* Conteúdo principal */
+a:hover {
+  filter: brightness(90%);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  nav a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ================= MAIN ================= */
 main {
-    background-color: white; /* contraste */
-    margin: 20px;  /* espaçamento em relação ao header e footer */
-    padding: 20px; /* espaço interno */
-    border-radius: 10px;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Imagens dentro do main */
 main img {
-    display: block;
-    margin: 20px auto;
-    max-width: 90%;
-    border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
 }
 
-/* Rodapé */
+/* ================= FOOTER ================= */
 footer {
-    background-color: black; 
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
 }
+
+/* ================= GRID PARA info.html ================= */
+main.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais no PC */
+  gap: 20px;
+}
+
+main.info-grid h2,
+main.info-grid h3 {
+  grid-column: 1 / -1; /* cabeçalhos ocupam toda largura */
+}
+
+main.info-grid table,
+main.info-grid ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* RESPONSIVIDADE GRID */
+@media (max-width: 800px) {
+  main.info-grid {
+    grid-template-columns: 1fr; /* uma coluna no telemóvel */
+  }
+}
+
