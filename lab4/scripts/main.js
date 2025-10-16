@@ -1,7 +1,7 @@
 // Manipuladores de eventos
-document.getElementById("botaoClick").addEventListener("click", function () {
+document.getElementById("botaoClick").addEventListener("click", () => {
   document.getElementById("descricao").textContent = "Clicaste no botão!";
-  this.style.backgroundColor = "#4CAF50";
+  document.getElementById("botaoClick").style.backgroundColor = "#4CAF50";
 });
 
 document.getElementById("botaoDblClick").addEventListener("dblclick", function () {

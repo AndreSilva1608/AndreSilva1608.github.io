@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Página com Eventos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo à Minha Página Interativa</h1>
+  </header>
+
+  <main>
+    <select id="seletorCor">
+  <option value="">-- Escolhe uma cor --</option>
+  <option value="lightblue">Azul claro</option>
+  <option value="lightgreen">Verde claro</option>
+  <option value="lightyellow">Amarelo claro</option>
+  <option value="lightcoral">Coral claro</option>
+</select>
+
+    <section>
+      <p id="descricao">Passa o rato por cima dos botões para ver magia acontecer!</p>
+      <button id="botaoClick">Clica em mim</button>
+      <button id="botaoDblClick">Clica duas vezes!</button>
+      <button id="botaoHover">Passa o rato aqui</button>
+      <button id="botaoSaida">Sai de cima de mim</button>
+      <button id="botaoMouseMove">Move o rato aqui</button>
+    </section>
+
+    <section id="contadorSection">
+      <h2>Contador</h2>
+      <p>Valor atual: <span id="contador">0</span></p>
+      <button id="incrementar">+1</button>
+      <button id="resetar">Reset</button>
+    </section>
+    <form id="formularioUsuario">
+  <input id="nome" type="text" placeholder="Insira o seu nome" required>
+  <input id="idade" type="number" placeholder="Insira a sua idade" required>
+  <input type="submit" value="Enviar">
+</form>
+
+<p id="mensagem"></p>
+
+  </main>
+
+  <footer>
+    <p>&copy; Laboratório 4 Javascript</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
