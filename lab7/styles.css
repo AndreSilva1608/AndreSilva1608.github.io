@@ -1,0 +1,238 @@
+:root {
+  --cor-principal: #3b82f6;
+  --cor-secundaria: #f3f4f6;
+  --cor-texto: #111;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0 0 .5rem 0;
+}
+
+/* Menu de navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+   background: rgb(255, 255, 255);
+}
+
+/* ---------------- PRODUTOS ---------------- */
+#produtos {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+#produtos h2 {
+  margin-bottom: 40px;
+  font-size: 4.5vh;
+  color: #004d40;
+}
+
+#lista-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada produto (article) como um “card” */
+#lista-produtos article {
+  width: 220px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lista-produtos article:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+#lista-produtos article img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+#lista-produtos article h3 {
+  font-size: 2.5vh;
+  color: #004d40;
+  margin: 0.5rem 0;
+}
+
+#lista-produtos article p {
+  font-size: 2vh;
+  margin: 0.2rem 0;
+}
+
+/* ---------------- CESTO ---------------- */
+#cesto {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+#cesto h2 {
+  border-bottom: 2px solid var(--cor-principal);
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: var(--cor-principal);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* ---------------- BOTÕES ---------------- */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botão de adicionar ao cesto */
+button.btn-adicionar {
+  background-color: var(--cor-principal);
+  color: white;
+}
+
+button.btn-adicionar:hover {
+  background-color: #2563eb; /* tom mais escuro */
+  transform: translateY(-2px);
+}
+
+/* Botão de remover do cesto */
+button.btn-remover {
+  background-color: #ef4444;
+  color: white;
+}
+
+button.btn-remover:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* ---------------- PREÇO TOTAL ---------------- */
+#preco-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+  margin-top: 1rem;
+  color: #004d40;
+}
+/* ---------------- BARRA DE FILTROS ---------------- */
+#barra-filtros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtro-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtro-item label {
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+#barra-filtros select,
+#barra-filtros input {
+  padding: 0.4rem 0.6rem;
+  border: 1.5px solid var(--cor-principal);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--cor-texto);
+  transition: all 0.2s ease;
+}
+
+#barra-filtros select:hover,
+#barra-filtros input:hover {
+  border-color: #2563eb;
+}
+
+#barra-filtros select:focus,
+#barra-filtros input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+#barra-filtros input {
+  width: 180px;
+}
